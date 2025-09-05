@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: josefin-sans;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/public/fonts/JosefinSans-Italic.ttf");
+}
+
+@font-face {
+    font-family: josefin-sans;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/public/fonts/JosefinSans-Italic.ttf");
+}
+
+
+@theme {
+    --color-bright-blue: hsl(220, 98%, 61%);
+    --color-check-background-en: hsl(280, 87%, 65%);
+    --color-check-background-start: hsl(192, 100%, 67%);
+
+    --color-neutral-very-light-gray: hsl(0, 0%, 98%);
+    --color-neutral-light-grayish-blue: hsl(236, 33%, 92%);
+    --color-neutral-grayish-blue: hsl(233, 11%, 84%);
+    --color-neutral-dark-grayish-blue: hsl(236, 11%, 61%);
+    --color-neutral-very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+    --color-neutral-very-dark-blue: hsl(235, 21%, 11%);
+    --color-neutral-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+    --color-neutral-light-grayish-blue: hsl(234, 39%, 85%);
+    --color-neutral-light-grayish-blue-hover: hsl(236, 33%, 92%);
+    --color-neutral-dark-grayish-blue: hsl(234, 11%, 52%);
+    --color-neutral-very-dark-grayish-blue: hsl(233, 14%, 35%);
+    --color-neutral-very-dark-grayish-blue-alt: hsl(237, 14%, 26%);
+
+    --font-primary-josefin-sans: 'josefin-sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+}
+
+@layer base {
+    .theme-light {
+        @apply bg-[url('/bg-mobile-light.jpg')] sm:bg-[url('/bg-desktop-light.jpg')] bg-cover bg-no-repeat bg-center h-60 sm:h-80;
+    }
+
+    .theme-dark {
+        @apply bg-[url('/bg-mobile-dark.jpg')] sm:bg-[url('/bg-desktop-dark.jpg')] bg-cover bg-no-repeat bg-center h-60 sm:h-80;
+    }
+}
